@@ -1,18 +1,28 @@
-import './App.css';
-import HelloWord from './components/HelloWord';
-import SayMyName from './components/SayMyName';
-import Pessoas from './components/Pessoas';
-import Frase from './components/Frase';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import Footer from './components/layout/Footer'
+import Navbar from './components/layout/Navbar'
+import Contato from './components/pages/Contato'
+import Empresa from './components/pages/Empresa'
+import Home from './components/pages/Home'
 
 function App() {
-
   return (
-    <div className="App">
-      <Frase/>
-      
-      <Pessoas name="Pia" idade="18 anos" profissao="Programado" foto="https://via.placeholder.com/150"/>
-    </div>
-  );
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/empresa">
+          <Empresa />
+        </Route>
+        <Route path="/contato">
+          <Contato />
+        </Route>
+      </Switch>
+      <Footer />
+    </Router>
+  )
 }
 
-export default App;
+export default App

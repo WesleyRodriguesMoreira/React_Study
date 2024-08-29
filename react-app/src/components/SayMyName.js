@@ -1,9 +1,9 @@
-function SayMyName(props){
-    return(
-        <di>
-            <p>Fala aí {props.name}, suave?</p>
-        </di>
-    )
+function SayMyName(props) {
+  return (
+    <div>
+      <p>Fala aí {props.nome}, suave?</p>
+    </div>
+  );
 }
 
 export default SayMyName;

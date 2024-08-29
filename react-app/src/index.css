@@ -1,6 +1,13 @@
 body {
-  font-size: 14px;
-  background-color: #cccccc94;
+  padding: 50px;
+  background-color: #efefef;
 }
 
+h1 {
+  color: #333;
+}
 
+p {
+  background-color: #999;
+  padding: 10px;
+}
